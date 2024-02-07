@@ -23,7 +23,7 @@ with open(file_path, 'r') as file:
     priorities = [line.strip() for line in file]
 # print(tags)
 
-examples = "".join([f"Text: {element['description']}\nPriority: {element['priority']}\n" for i, element in enumerate(data[:5])])
+examples = "".join([f"Text: {element['description']}\nPriority: {element['priority']}\Tags: {element['tags']}\n" for i, element in enumerate(data[:5])])
 count, score_priority, score_tags = 0, 0
 
 for element in data[100:110]:
