@@ -28,15 +28,18 @@ with open(file_path, 'r') as file:
     priorities = [line.strip() for line in file]
 # print(tags)
 
-
 ticket_text = element['description']
+examples = "".join([f"Text: {element['description']}\nPriority: {element['priority']}\n" for i, element in enumerate(data[:5])])
 
 # Prompt – Classify Priority
 user_prompt_priority = f"""
 Classify the text into one of the following classes.
 Classes: {priorities}
+{examples}
 Text: {ticket_text}
 Priority: """
+
+print("Prompt: "+user_prompt_priority)
 
 response = client.chat.completions.create(
     model="gpt-3.5-turbo",
