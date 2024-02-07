@@ -17,13 +17,13 @@ client = OpenAI(
 )
 
 # get the tags
-file_path = 'tags.txt'
+file_path = 'data/tags.txt'
 with open(file_path, 'r') as file:
     tags = [line.strip() for line in file]
 # print(tags)
     
 # get the priorities
-file_path = 'priorities.txt'
+file_path = 'data/priorities.txt'
 with open(file_path, 'r') as file:
     priorities = [line.strip() for line in file]
 # print(tags)
