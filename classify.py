@@ -39,7 +39,7 @@ Classes: {priorities}
 Text: {ticket_text}
 Priority: """
 
-print("Prompt: "+user_prompt_priority)
+# print("Prompt: "+user_prompt_priority)
 
 response = client.chat.completions.create(
     model="gpt-3.5-turbo",
